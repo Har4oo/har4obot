@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Har4oBotApplication {
 
 	public static void main(String[] args) {
-		JDABuilder builder = JDABuilder.createDefault("MTE3MDExNDAyODA5NDM3Mzk1OQ.GsFFU8.yUaZUyJWcOXQ9TF4a_zvi6t0Em5_pbTnpr01YI");
+		JDABuilder builder = JDABuilder.createDefault("");
 		
 		builder.build();
 	}
