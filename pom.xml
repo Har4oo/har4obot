@@ -16,6 +16,12 @@
 	<properties>
 		<java.version>20</java.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,9 +39,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>net.dv8tion</groupId>
+			<groupId>com.github.discord-jda</groupId>
 			<artifactId>JDA</artifactId>
-			<version>3.8</version>
+			<version>v5.0.0-beta.17</version>
 		</dependency>
 	</dependencies>
 	<build>
