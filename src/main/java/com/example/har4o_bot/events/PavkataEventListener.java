@@ -5,22 +5,26 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
-public class TestEvent extends ListenerAdapter {
+public class PavkataEventListener extends ListenerAdapter {
     @Override
     public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-
-        String messageContent = event.getMessage().getContentRaw();
-
         User user = event.getAuthor();
         String usersName = user.getName();
 
-        System.out.println("users name "+usersName);
+        if (usersName.equals("pablo0443") || usersName.equals("Har4o")) {
 
-        if (messageContent.equals("hello") && usersName.equals("pablo0443") || messageContent.equals("Hello") && usersName.equals("pablo0443")){
-            event.getChannel().sendMessage("Zdravei, Pavka!").queue();
+            String messageContent = event.getMessage().getContentRaw();
+
+            String messageContentButInLowerCase = messageContent.toLowerCase();
+
+            if (messageContentButInLowerCase.equals("hello")) {
+                event.getChannel().sendMessage("Zdravei, Pavka!").queue();
+            }
+            if (messageContentButInLowerCase.equals("niggers"))
+                event.getChannel().sendMessage("da, znaem pavka <3").queue();
+
+            System.out.println(messageContent);
         }
-
-        System.out.println(messageContent);
     }
 
 }
